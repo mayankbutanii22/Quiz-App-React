@@ -1,0 +1,175 @@
+
+
+.container {
+  background: rgba(255, 255, 255, 0.06);
+  padding: 26px 24px;
+  border-radius: 18px;
+
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.55);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.container:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 45px rgba(0, 0, 0, 0.65);
+}
+
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.title {
+  font-size: 22px;
+  margin: 0;
+  font-weight: 700;
+
+  background: linear-gradient(90deg, #bcd9ff, #ffffff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+  gap: 12px;
+}
+
+
+.btn {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 10px 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  color: #e7eef7;
+  font-weight: 600;
+  transition: all 0.25s ease;
+  backdrop-filter: blur(6px);
+}
+
+.btn:hover:not(:disabled) {
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45);
+}
+
+.btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+
+.centerHint {
+  text-align: center;
+  flex: 1;
+  color: #c3ccda;
+  font-size: 14px;
+}
+
+.hint {
+  color: #8ea0b9;
+}
+
+
+.footerActions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 16px;
+}
+
+
+.finish {
+  background: linear-gradient(90deg, #00ffe0, #00aaff, #0077ff);
+  border: none;
+  padding: 12px 20px;
+  border-radius: 12px;
+  color: #021f29;
+  cursor: pointer;
+
+  font-weight: 700;
+  letter-spacing: 0.4px;
+
+  box-shadow: 0 5px 18px rgba(0, 200, 255, 0.35);
+  transition: all 0.25s ease;
+}
+
+.finish:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 26px rgba(0, 200, 255, 0.55);
+}
+
+
+
+
+/* ---------------------- Tablet (<= 768px) ---------------------- */
+
+@media (max-width: 768px) {
+  .container {
+    padding: 22px;
+    border-radius: 16px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .controls {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .finish {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* ---------------------- Mobile (<= 480px) ---------------------- */
+
+@media (max-width: 480px) {
+  .container {
+    padding: 18px;
+    border-radius: 14px;
+  }
+
+  .title {
+    font-size: 18px;
+  }
+
+  .controls {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .centerHint {
+    font-size: 13px;
+  }
+
+  .btn {
+    padding: 9px 14px;
+    border-radius: 10px;
+    font-size: 13px;
+  }
+
+  .finish {
+    padding: 10px 14px;
+    border-radius: 10px;
+    font-size: 14px;
+  }
+}
